@@ -15,4 +15,22 @@
     limitations under the License.
 
 -->
-<div ui-view></div>
+<md-content>
+  <div id="main-content">
+
+    <div ui-view="header"></div>
+
+    <div ui-view="description"></div>
+    <section id="description" class="small" layout="row" layout-align="center center">
+      <div flex="50">
+        <h2>Main feature</h2>
+        <p>
+          Ille Maximum numquam aetate dicam numquam in sunt sibi egregium parem Philo aetate suosque excellentiae erat Philo
+          ampliores numquam inferioris fratrem suosque sunt in Scipionis Numquam est est inferioris numquam.
+        </p>
+      </div>
+    </section>
+
+    <div ui-view="plans"></div>
+  </div>
+</md-content>

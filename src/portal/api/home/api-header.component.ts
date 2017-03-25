@@ -13,18 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export class ApiController {
+const ApiHeaderComponent: ng.IComponentOptions = {
+  bindings: {
+    api: '<'
+  },
+  template: require('./api-header.html')
+};
 
-  private plans: any[];
-  private api: any;
-
-  constructor (private resolvedApi, private ApiService, private $stateParams) {
-    'ngInject';
-    const vm = this;
-
-    vm.api = resolvedApi.data;
-    ApiService.getApiPlans($stateParams.apiId).then(function (response) {
-      vm.plans = response.data;
-    });
-  }
-}
+export default ApiHeaderComponent;
